@@ -9,11 +9,81 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Inter', sans-serif;
     background: #edf6f9;
     color: #2a2a2a;
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* -------------------------------------------------- */
+/* IMPORT DES POLICES LOCALES (dossier Polices) */
+/* -------------------------------------------------- */
+
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('Polices/SpaceGrotesk-Regular.ttf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('Polices/SpaceGrotesk-Bold.ttf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Polices/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Polices/Inter_18pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('Polices/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+/* TITRES */
+h1, h2 {
+    font-family: 'SpaceGrotesk', sans-serif;
+    font-weight: 700;
+    color: #006d77;
+}
+
+h3 {
+    font-family: 'SpaceGrotesk', sans-serif;
+    font-weight: 400;
+    color: #006d77;
+}
+
+/* PARAGRAPHES */
+p, li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* MENU + BOUTONS */
+nav a, button, .btn-accueil {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+/* ACCENTS DEV */
+.code-accent {
+    font-family: 'JetBrainsMono', monospace;
+    font-weight: 400;
+    font-size: 15px;
+    color: #006d77;
 }
 
 /* -------------------------------------------------- */
