@@ -37,11 +37,11 @@ nav {
     align-items: center;
 }
 
-.logo {
+.logo a {
     color: white;
+    text-decoration: none;
     font-size: 26px;
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
 nav ul {
@@ -58,8 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #edf6f9;
-    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 /* -------------------------------------------------- */
@@ -95,7 +94,7 @@ section h3 {
 }
 
 /* -------------------------------------------------- */
-/* GRID PROJETS */
+/* PROJETS */
 /* -------------------------------------------------- */
 
 .project-grid {
@@ -106,23 +105,21 @@ section h3 {
 }
 
 .project-card {
+    display: block;
     background: #ffffff;
     border-radius: 18px;
     padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #83c5be;
     box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
     transition: 0.3s ease;
-    overflow: hidden;
-    border: 2px solid #83c5be;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 109, 119, 0.25);
 }
-
-/* -------------------------------------------------- */
-/* IMAGES */
-/* -------------------------------------------------- */
 
 .project-card img {
     width: 100%;
@@ -131,52 +128,102 @@ section h3 {
     background: #edf6f9;
     border-radius: 14px;
     margin-bottom: 15px;
-    transition: 0.4s ease;
 }
-
-.project-card:hover img {
-    transform: scale(1.03);
-}
-
-/* -------------------------------------------------- */
-/* TEXTES */
-/* -------------------------------------------------- */
 
 .project-card h3 {
     font-size: 20px;
     margin-bottom: 10px;
     color: #006d77;
-    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-.project-card p {
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-
-.project-card a {
+.project-card:hover h3 {
     color: #008b8f;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
 }
 
 /* -------------------------------------------------- */
-/* FOOTER */
+/* PAGE PROJET DETAIL */
 /* -------------------------------------------------- */
 
-footer {
+#projet-detail {
+    text-align: left;
+}
+
+.projet-desc {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* -------------------------------------------------- */
+/* SLIDER AVANT / APRÈS */
+/* -------------------------------------------------- */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
+}
+
+.slider-img img {
+    width: 100%;
+    display: block;
+}
+
+.slider-img.vector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+}
+
+.slider-range {
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.slider-img.original img {
+    transform: scale(0.97);
+}
+
+/* -------------------------------------------------- */
+/* LISTES */
+/* -------------------------------------------------- */
+
+.projet-list {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.projet-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* -------------------------------------------------- */
+/* BOUTON RETOUR */
+/* -------------------------------------------------- */
+
+.retour-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
     background: #006d77;
     color: white;
-    padding: 30px;
-    text-align: center;
-    margin-top: 60px;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 -4px 12px rgba(0, 109, 119, 0.25);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.retour-btn:hover {
+    background: #008b8f;
 }
 
 /* -------------------------------------------------- */
@@ -184,7 +231,6 @@ footer {
 /* -------------------------------------------------- */
 
 @media (max-width: 768px) {
-
     nav ul {
         gap: 15px;
     }
@@ -198,8 +244,21 @@ footer {
     }
 }
 
+
+.slider-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.slider-img.original img,
+.slider-img.vector img {
+    aspect-ratio: 1 / 1; /* ou 4/5 selon ton portrait */
+}
+
+
+
 /* -------------------------------------------------- */
-/* COMPETENCES INTERACTIVES */
+/* COMPETENCES */
 /* -------------------------------------------------- */
 
 #competences {
@@ -243,7 +302,6 @@ footer {
 }
 
 /* Barres de progression */
-
 .skill {
     margin-bottom: 15px;
     text-align: left;
@@ -272,227 +330,284 @@ footer {
 }
 
 /* -------------------------------------------------- */
-/* ACCUEIL */
+/* PAGE AFFICHE MALDIVES */
 /* -------------------------------------------------- */
 
-#accueil {
-    background: linear-gradient(120deg, #83c5be, #008b8f, #006d77);
-    background-size: 300% 300%;
-    animation: gradientMove 12s ease infinite;
-    color: white;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-#accueil h1 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease forwards;
-}
-
-#accueil h2 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease forwards 0.3s;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* -------------------------------------------------- */
-/* ACCUEIL — BOUTON */
-/* -------------------------------------------------- */
-
-.cta-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background: white;
-    color: #006d77;
-    font-weight: 600;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-.cta-btn:hover {
-    background: #83c5be;
-    transform: translateY(-4px);
-    box-shadow: 0 6px 15px rgba(0, 109, 119, 0.3);
-}
-
-/* -------------------------------------------------- */
-/* ACCUEIL — ICONES */
-/* -------------------------------------------------- */
-
-.skills-icons {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.icon {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 12px 20px;
-    border-radius: 12px;
-    backdrop-filter: blur(6px);
-    color: white;
-    font-weight: 600;
-    transition: 0.3s ease;
-    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.25);
-}
-
-.icon:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.5);
-}
-
-/* -------------------------------------------------- */
-/* A PROPOS */
-/* -------------------------------------------------- */
-
-#apropos {
+.affiche-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
     text-align: center;
 }
 
-.apropos-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 30px;
+.affiche-img {
+    width: 100%;
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
 }
 
-/* Photo ronde */
+/* -------------------------------------------------- */
+/* PAGE ANTIGAS’P */
+/* -------------------------------------------------- */
 
-.photo-circle {
-    width: 180px;
-    height: 180px;
-    background: linear-gradient(120deg, #83c5be, #006d77);
-    border-radius: 50%;
-    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.25);
-    animation: popIn 0.8s ease forwards;
-    transition: transform 0.4s ease;
+.site-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
 }
 
-@keyframes popIn {
-    from { transform: scale(0.6); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+.site-img {
+    width: 100%;
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
 }
 
-.photo-circle:hover {
-    transform: scale(1.08) rotate(2deg);
-}
-
-/* Texte */
-
-.apropos-texte {
-    max-width: 500px;
-    text-align: left;
-}
-
-.apropos-texte h1 {
-    color: #006d77;
-    margin-bottom: 15px;
-}
-
-.apropos-texte .intro {
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-
-/* Infos */
-
-.infos {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.info-item {
-    background: #edf6f9;
-    padding: 10px 15px;
+.site-btn {
+    display: inline-block;
+    margin: 20px auto 40px;
+    padding: 12px 25px;
+    background: #006d77;
+    color: white;
     border-radius: 12px;
+    text-decoration: none;
     font-weight: 600;
-    color: #006d77;
-    box-shadow: 0 4px 10px rgba(0, 109, 119, 0.15);
     transition: 0.3s ease;
 }
 
-.info-item:hover {
-    transform: translateX(6px);
+.site-btn:hover {
+    background: #008b8f;
 }
 
-/* Timeline */
 
-.timeline-title {
-    margin-top: 50px;
-    color: #006d77;
+/* -------------------------------------------------- */
+/* PAGE LOGO AKOU */
+/* -------------------------------------------------- */
+
+.affiche-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
 }
 
-.timeline {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.affiche-img {
+    width: 100%;
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
 }
 
-.timeline-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease forwards;
+
+/* -------------------------------------------------- */
+/* PAGE PREVENTION IA */
+/* -------------------------------------------------- */
+
+.affiche-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: center;
 }
 
-.timeline-item:nth-child(2) {
-    animation-delay: 0.3s;
+.affiche-img {
+    width: 100%;
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
 }
 
-.timeline-item:nth-child(3) {
-    animation-delay: 0.6s;
+
+/* -------------------------------------------------- */
+/* PAGE SUNCHUAN */
+/* -------------------------------------------------- */
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
 }
 
-.timeline-dot {
-    width: 18px;
-    height: 18px;
-    background: #006d77;
-    border-radius: 50%;
-    animation: pulse 2s infinite ease-in-out;
-}
-
-.timeline-content {
-    background: white;
-    padding: 15px 20px;
+.logo-item {
+    width: 100%;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.15);
-    border: 2px solid #83c5be;
-    text-align: left;
+    border: 3px solid #006d77;
+    background: #edf6f9;
+    padding: 10px;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.25); }
-    100% { transform: scale(1); }
+.etiquette-flex {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
 }
 
-/* Reveal transitions */
-
-#apropos .intro,
-#apropos .info-item,
-#apropos .timeline-item {
-    transition: 0.8s ease;
+.etiquette-img {
+    width: 330px;        /* +30px, très léger mais visible */
+    height: auto;
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
 }
 
+.bouteille-img {
+    width: 300px;
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
+}
+
+.site-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.site-img {
+    width: 85%;          /* au lieu de 100% */
+    max-width: 750px;    /* limite la taille */
+    border-radius: 18px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
+    margin: auto;        /* pour bien centrer */
+    display: block;
+}
+
+
+.site-btn {
+    display: inline-block;
+    margin: 20px auto 40px;
+    padding: 12px 25px;
+    background: #006d77;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.site-btn:hover {
+    background: #008b8f;
+}
+
+
+/* -------------------------------------------------- */
+/* AFFICHES SUNCHUAN — AJUSTEMENT MICRO */
+/* -------------------------------------------------- */
+
+.affiche-sunchuan-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.affiche-item {
+    text-align: center;
+}
+
+/* Micro-augmentation du cadre pour que l’affiche rentre parfaitement */
+.affiche-item img {
+    width: 235px;        /* +5px */
+    height: 335px;       /* +5px */
+    object-fit: contain;
+    background: #f7f7f7;
+    border-radius: 14px;
+    border: 2px solid #006d77;
+    box-shadow: 0 4px 12px rgba(0, 109, 119, 0.18);
+}
+
+
+/* -------------------------------------------------- */
+/* PAGE FESTIVAL SUCRÉ */
+/* -------------------------------------------------- */
+
+/* -------------------------------------------------- */
+/* AFFICHE FESTIVAL SUCRÉ — même taille que SunChuan */
+/* -------------------------------------------------- */
+
+.affiche-festival {
+    width: 220px;        /* légèrement plus petit */
+    height: 310px;       /* proportions A3 réduites */
+    object-fit: contain;
+    background: #f7f7f7;
+    border-radius: 14px;
+    border: 2px solid #006d77;
+    box-shadow: 0 4px 12px rgba(0, 109, 119, 0.18);
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* Billet */
+.billet-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Billet — même taille que la signalétique */
+.billet-img {
+    width: 330px;        /* même largeur que .signal-item */
+    height: auto;        /* proportions respectées */
+    border-radius: 12px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
+    margin: auto;
+    display: block;
+}
+
+
+/* Signalétique */
+.signal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.signal-item {
+    width: 330px;        /* même taille que l’étiquette */
+    height: auto;        /* proportions respectées */
+    border-radius: 12px;
+    border: 3px solid #006d77;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
+    margin: auto;
+    display: block;
+}
+
+
+/* -------------------------------------------------- */
+/* BOUTON ACCUEIL — PREMIUM BLEU CANARD */
+/* -------------------------------------------------- */
+
+.btn-accueil {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #006d77;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.25);
+    margin-top: 25px;
+}
+
+.btn-accueil:hover {
+    background-color: #008b8f;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 109, 119, 0.35);
+}

@@ -98,3 +98,29 @@ if (aboutTitle) {
 
     typeAbout();
 }
+
+
+// Slider avant/après pour le portrait
+const slider = document.querySelector(".slider-range");
+const vectorImg = document.querySelector(".slider-img.vector");
+
+if (slider && vectorImg) {
+    slider.addEventListener("input", () => {
+        vectorImg.style.width = slider.value + "%";
+    });
+}
+
+
+// Animation simple des éléments (optionnel)
+document.addEventListener("DOMContentLoaded", () => {
+    const logos = document.querySelectorAll(".logo-item");
+    logos.forEach((logo, index) => {
+        logo.style.opacity = "0";
+        logo.style.transform = "translateY(15px)";
+        setTimeout(() => {
+            logo.style.transition = "0.4s ease";
+            logo.style.opacity = "1";
+            logo.style.transform = "translateY(0)";
+        }, 150 * index);
+    });
+});
