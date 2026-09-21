@@ -10,7 +10,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #fff7fb; /* rose très léger */
+    background: #edf6f9;
     color: #2a2a2a;
     line-height: 1.6;
     overflow-x: hidden;
@@ -21,12 +21,12 @@ body {
 /* -------------------------------------------------- */
 
 header {
-    background: linear-gradient(90deg, #ff7ebf, #ff4fa3); /* rose dégradé */
+    background: linear-gradient(90deg, #006d77, #008b8f);
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 12px rgba(255, 79, 163, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 109, 119, 0.3);
 }
 
 nav {
@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffe3f3;
+    color: #edf6f9;
     transform: scale(1.1);
 }
 
@@ -70,9 +70,9 @@ section {
     width: 90%;
     margin: 60px auto;
     padding: 40px;
-    background: white;
+    background: #edf6f9;
     border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(255, 79, 163, 0.15);
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.15);
     animation: fadeIn 0.8s ease forwards;
 }
 
@@ -84,14 +84,14 @@ section {
 section h1 {
     font-size: 34px;
     margin-bottom: 20px;
-    color: #ff4fa3; /* rose vif */
+    color: #006d77;
     font-weight: 700;
 }
 
 section h3 {
     font-size: 22px;
     margin: 25px 0 10px;
-    color: #ff7ebf; /* rose pastel */
+    color: #008b8f;
 }
 
 /* -------------------------------------------------- */
@@ -109,15 +109,15 @@ section h3 {
     background: #ffffff;
     border-radius: 18px;
     padding: 20px;
-    box-shadow: 0 6px 18px rgba(255, 79, 163, 0.18);
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
     transition: 0.3s ease;
     overflow: hidden;
-    border: 2px solid #ffd0e8; /* contour rose pastel */
+    border: 2px solid #83c5be;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(255, 79, 163, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 109, 119, 0.25);
 }
 
 /* -------------------------------------------------- */
@@ -128,7 +128,7 @@ section h3 {
     width: 100%;
     max-height: 350px;
     object-fit: contain;
-    background: #ffeaf5; /* fond rose très léger */
+    background: #edf6f9;
     border-radius: 14px;
     margin-bottom: 15px;
     transition: 0.4s ease;
@@ -145,7 +145,7 @@ section h3 {
 .project-card h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #ff4fa3;
+    color: #006d77;
     font-weight: 600;
 }
 
@@ -155,7 +155,7 @@ section h3 {
 }
 
 .project-card a {
-    color: #ff4fa3;
+    color: #008b8f;
     font-weight: 600;
     text-decoration: none;
 }
@@ -169,14 +169,14 @@ section h3 {
 /* -------------------------------------------------- */
 
 footer {
-    background: #ff4fa3;
+    background: #006d77;
     color: white;
     padding: 30px;
     text-align: center;
     margin-top: 60px;
     font-size: 14px;
     letter-spacing: 0.5px;
-    box-shadow: 0 -4px 12px rgba(255, 79, 163, 0.25);
+    box-shadow: 0 -4px 12px rgba(0, 109, 119, 0.25);
 }
 
 /* -------------------------------------------------- */
@@ -197,7 +197,6 @@ footer {
         max-height: 250px;
     }
 }
-
 
 /* -------------------------------------------------- */
 /* COMPETENCES INTERACTIVES */
@@ -227,23 +226,24 @@ footer {
     background: #ffffff;
     padding: 25px;
     border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(255, 79, 163, 0.18);
-    border: 2px solid #ffd0e8;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.18);
+    border: 2px solid #83c5be;
     transition: 0.3s ease;
 }
 
 .competence-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(255, 79, 163, 0.25);
+    box-shadow: 0 10px 25px rgba(0, 109, 119, 0.25);
 }
 
 .competence-card h3 {
-    color: #ff4fa3;
+    color: #006d77;
     margin-bottom: 15px;
     font-size: 22px;
 }
 
 /* Barres de progression */
+
 .skill {
     margin-bottom: 15px;
     text-align: left;
@@ -257,7 +257,7 @@ footer {
 .bar {
     width: 100%;
     height: 10px;
-    background: #ffe3f3;
+    background: #edf6f9;
     border-radius: 10px;
     margin-top: 5px;
     overflow: hidden;
@@ -265,15 +265,18 @@ footer {
 
 .progress {
     height: 100%;
-    background: #ff4fa3;
+    background: #006d77;
     width: 0;
     border-radius: 10px;
     transition: width 1s ease;
 }
 
+/* -------------------------------------------------- */
+/* ACCUEIL */
+/* -------------------------------------------------- */
 
 #accueil {
-    background: linear-gradient(120deg, #ffe3f3, #ff7ebf, #ff4fa3);
+    background: linear-gradient(120deg, #83c5be, #008b8f, #006d77);
     background-size: 300% 300%;
     animation: gradientMove 12s ease infinite;
     color: white;
@@ -313,7 +316,7 @@ footer {
     margin-top: 25px;
     padding: 12px 25px;
     background: white;
-    color: #ff4fa3;
+    color: #006d77;
     font-weight: 600;
     border-radius: 12px;
     text-decoration: none;
@@ -321,9 +324,9 @@ footer {
 }
 
 .cta-btn:hover {
-    background: #ffe3f3;
+    background: #83c5be;
     transform: translateY(-4px);
-    box-shadow: 0 6px 15px rgba(255, 79, 163, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 109, 119, 0.3);
 }
 
 /* -------------------------------------------------- */
@@ -346,45 +349,13 @@ footer {
     color: white;
     font-weight: 600;
     transition: 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.25);
 }
 
 .icon:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.5);
 }
-
-#accueil h1 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease forwards;
-}
-
-#accueil h2 {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 1s ease forwards 0.3s;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#accueil {
-    background: linear-gradient(120deg, #ffe3f3, #ff7ebf, #ff4fa3);
-    background-size: 300% 300%;
-    animation: gradientMove 12s ease infinite;
-    color: white;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 
 /* -------------------------------------------------- */
 /* A PROPOS */
@@ -404,13 +375,15 @@ footer {
 }
 
 /* Photo ronde */
+
 .photo-circle {
     width: 180px;
     height: 180px;
-    background: linear-gradient(120deg, #ff7ebf, #ff4fa3);
+    background: linear-gradient(120deg, #83c5be, #006d77);
     border-radius: 50%;
-    box-shadow: 0 6px 18px rgba(255, 79, 163, 0.25);
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.25);
     animation: popIn 0.8s ease forwards;
+    transition: transform 0.4s ease;
 }
 
 @keyframes popIn {
@@ -418,14 +391,19 @@ footer {
     to { transform: scale(1); opacity: 1; }
 }
 
+.photo-circle:hover {
+    transform: scale(1.08) rotate(2deg);
+}
+
 /* Texte */
+
 .apropos-texte {
     max-width: 500px;
     text-align: left;
 }
 
 .apropos-texte h1 {
-    color: #ff4fa3;
+    color: #006d77;
     margin-bottom: 15px;
 }
 
@@ -435,6 +413,7 @@ footer {
 }
 
 /* Infos */
+
 .infos {
     display: flex;
     flex-direction: column;
@@ -442,12 +421,12 @@ footer {
 }
 
 .info-item {
-    background: #ffe3f3;
+    background: #edf6f9;
     padding: 10px 15px;
     border-radius: 12px;
     font-weight: 600;
-    color: #ff4fa3;
-    box-shadow: 0 4px 10px rgba(255, 79, 163, 0.15);
+    color: #006d77;
+    box-shadow: 0 4px 10px rgba(0, 109, 119, 0.15);
     transition: 0.3s ease;
 }
 
@@ -456,9 +435,10 @@ footer {
 }
 
 /* Timeline */
+
 .timeline-title {
     margin-top: 50px;
-    color: #ff4fa3;
+    color: #006d77;
 }
 
 .timeline {
@@ -488,38 +468,18 @@ footer {
 .timeline-dot {
     width: 18px;
     height: 18px;
-    background: #ff4fa3;
+    background: #006d77;
     border-radius: 50%;
+    animation: pulse 2s infinite ease-in-out;
 }
 
 .timeline-content {
     background: white;
     padding: 15px 20px;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(255, 79, 163, 0.15);
-    border: 2px solid #ffd0e8;
+    box-shadow: 0 6px 18px rgba(0, 109, 119, 0.15);
+    border: 2px solid #83c5be;
     text-align: left;
-}
-
-
-#apropos .intro,
-#apropos .info-item,
-#apropos .timeline-item {
-    transition: 0.8s ease;
-}
-
-
-.photo-circle {
-    transition: transform 0.4s ease;
-}
-
-.photo-circle:hover {
-    transform: scale(1.08) rotate(2deg);
-}
-
-
-.timeline-dot {
-    animation: pulse 2s infinite ease-in-out;
 }
 
 @keyframes pulse {
@@ -527,3 +487,12 @@ footer {
     50% { transform: scale(1.25); }
     100% { transform: scale(1); }
 }
+
+/* Reveal transitions */
+
+#apropos .intro,
+#apropos .info-item,
+#apropos .timeline-item {
+    transition: 0.8s ease;
+}
+
